@@ -4,8 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Node.js File Server</title>
+        <!-- Link to the CSS file -->
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Welcome the Node.js File Server</h1>
+        <div class="container">
+            <h1>Welcome to the Node.js File Server</h1>
+
+            <!-- Form to upload files -->
+            <form action="/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+                <label for="file">Choose file to upload:</label>
+                <input type="file" id="file" name="file" required>
+                <button type="submit">Upload File</button>
+            </form>
+
+            <!-- Displaying success/error messages -->
+            <div id="message"></div>
+        </div>
     </body>
 </html>
